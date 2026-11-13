@@ -1,4 +1,7 @@
 {
- "config": {},
+ "config": {
+  "lockdownMessage": "This portal is locked right now.. Check Back Later",
+  "lockdownShowHelp": false
+ },
  "presets": {}
 }
