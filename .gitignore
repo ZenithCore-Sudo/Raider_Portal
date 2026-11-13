@@ -1,0 +1,12 @@
+.env
+.env.*
+.vercel
+node_modules
+*.map
+*.pem
+*.key
+*.log
+.DS_Store
+original*
+source*
+tools/
