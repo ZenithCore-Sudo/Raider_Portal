@@ -1,6 +1,4 @@
 {
- "config": {
-  "lockdown": true
- },
+ "config": {},
  "presets": {}
 }
