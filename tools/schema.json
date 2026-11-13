@@ -1,0 +1,965 @@
+[
+ {
+  "k": "lockdown",
+  "g": "Lockdown",
+  "h": "true = cover the whole portal with a lock screen",
+  "d": false,
+  "t": "bool",
+  "l": "Lockdown"
+ },
+ {
+  "k": "lockdownTitle",
+  "g": "Lockdown",
+  "h": "",
+  "d": "Portal locked",
+  "t": "str",
+  "l": "Lockdown Title"
+ },
+ {
+  "k": "lockdownMessage",
+  "g": "Lockdown",
+  "h": "",
+  "d": "This portal is locked right now. Please check with your teacher.",
+  "t": "text",
+  "l": "Lockdown Message"
+ },
+ {
+  "k": "lockdownFrom",
+  "g": "Lockdown",
+  "h": "optional start, like \"2026-10-20T08:00\" (blank = starts now)",
+  "d": "",
+  "t": "dt",
+  "l": "Lockdown From"
+ },
+ {
+  "k": "lockdownUntil",
+  "g": "Lockdown",
+  "h": "optional end,   like \"2026-10-20T14:30\" (blank = never ends)",
+  "d": "",
+  "t": "dt",
+  "l": "Lockdown Until"
+ },
+ {
+  "k": "lockdownShowHelp",
+  "g": "Lockdown",
+  "h": "keep a Call or text 988 button on the lock screen",
+  "d": true,
+  "t": "bool",
+  "l": "Lockdown Show Help"
+ },
+ {
+  "k": "testingMode",
+  "g": "Testing mode",
+  "h": "true = turn testing mode on",
+  "d": false,
+  "t": "bool",
+  "l": "Testing Mode"
+ },
+ {
+  "k": "testingTabs",
+  "g": "Testing mode",
+  "h": "tabs that stay open: apps, tools, plan, cal, school, courses, ath, help, settings",
+  "d": [
+   "tools"
+  ],
+  "t": "multi",
+  "o": [
+   "apps",
+   "tools",
+   "plan",
+   "cal",
+   "school",
+   "courses",
+   "ath",
+   "help",
+   "settings"
+  ],
+  "l": "Testing Tabs"
+ },
+ {
+  "k": "testingHideTools",
+  "g": "Testing mode",
+  "h": "tools hidden while testing (exact tool names)",
+  "d": [
+   "Quick notes",
+   "Citation maker",
+   "Word counter",
+   "Flashcards"
+  ],
+  "t": "list",
+  "l": "Testing Hide Tools"
+ },
+ {
+  "k": "testingAllowedApps",
+  "g": "Testing mode",
+  "h": "apps that stay open while testing, like [\"Desmos\",\"Canvas\"]",
+  "d": [],
+  "t": "list",
+  "l": "Testing Allowed Apps"
+ },
+ {
+  "k": "testingMessage",
+  "g": "Testing mode",
+  "h": "",
+  "d": "Testing mode is on. Only approved tools are available.",
+  "t": "text",
+  "l": "Testing Message"
+ },
+ {
+  "k": "testingShowBanner",
+  "g": "Testing mode",
+  "h": "show the testing message at the bottom",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Show Banner"
+ },
+ {
+  "k": "testingBlockApps",
+  "g": "Testing mode",
+  "h": "block apps (except testingAllowedApps)",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Block Apps"
+ },
+ {
+  "k": "testingBlockLinks",
+  "g": "Testing mode",
+  "h": "block outside links",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Block Links"
+ },
+ {
+  "k": "testingBlockShortcuts",
+  "g": "Testing mode",
+  "h": "turn off keyboard shortcuts",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Block Shortcuts"
+ },
+ {
+  "k": "testingBlockQuickFind",
+  "g": "Testing mode",
+  "h": "turn off Quick find",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Block Quick Find"
+ },
+ {
+  "k": "testingBlockThemes",
+  "g": "Testing mode",
+  "h": "block theme changes",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Block Themes"
+ },
+ {
+  "k": "testingBlockCopyPaste",
+  "g": "Testing mode",
+  "h": "block copy, cut, paste and right-click",
+  "d": true,
+  "t": "bool",
+  "l": "Testing Block Copy Paste"
+ },
+ {
+  "k": "banner",
+  "g": "Site-wide controls",
+  "h": "message shown on every page (\"\" = none)",
+  "d": "",
+  "t": "text",
+  "l": "Banner"
+ },
+ {
+  "k": "bannerTop",
+  "g": "Site-wide controls",
+  "h": "true = show the banner at the top instead of the bottom",
+  "d": false,
+  "t": "bool",
+  "l": "Banner Top"
+ },
+ {
+  "k": "bannerDismissible",
+  "g": "Site-wide controls",
+  "h": "true = students can close the banner (until they reopen the page)",
+  "d": false,
+  "t": "bool",
+  "l": "Banner Dismissible"
+ },
+ {
+  "k": "noApps",
+  "g": "Site-wide controls",
+  "h": "true = apps cannot be opened",
+  "d": false,
+  "t": "bool",
+  "l": "No Apps"
+ },
+ {
+  "k": "noLinks",
+  "g": "Site-wide controls",
+  "h": "true = every outside link is blocked",
+  "d": false,
+  "t": "bool",
+  "l": "No Links"
+ },
+ {
+  "k": "blockedApps",
+  "g": "Site-wide controls",
+  "h": "apps removed completely, like [\"YouTube\",\"Netflix\"]",
+  "d": [],
+  "t": "list",
+  "l": "Blocked Apps"
+ },
+ {
+  "k": "blockedSites",
+  "g": "Site-wide controls",
+  "h": "sites blocked, like [\"tiktok.com\"] (removes matching apps and blocks links)",
+  "d": [],
+  "t": "list",
+  "l": "Blocked Sites"
+ },
+ {
+  "k": "hiddenCategories",
+  "g": "Site-wide controls",
+  "h": "app categories hidden, like [\"News\"]",
+  "d": [],
+  "t": "list",
+  "l": "Hidden Categories"
+ },
+ {
+  "k": "disabledTools",
+  "g": "Site-wide controls",
+  "h": "single tools hidden, like [\"Typing test\"]",
+  "d": [],
+  "t": "list",
+  "l": "Disabled Tools"
+ },
+ {
+  "k": "warnBeforeLeaving",
+  "g": "Site-wide controls",
+  "h": "true = ask \"Leave the portal?\" before any outside link",
+  "d": false,
+  "t": "bool",
+  "l": "Warn Before Leaving"
+ },
+ {
+  "k": "disableRightClick",
+  "g": "Site-wide controls",
+  "h": "true = block the right-click menu",
+  "d": false,
+  "t": "bool",
+  "l": "Disable Right Click"
+ },
+ {
+  "k": "disableTextSelection",
+  "g": "Site-wide controls",
+  "h": "true = text cannot be selected (typing boxes still work)",
+  "d": false,
+  "t": "bool",
+  "l": "Disable Text Selection"
+ },
+ {
+  "k": "idleScreenMinutes",
+  "g": "Site-wide controls",
+  "h": "show a \"Still there?\" screen after this many idle minutes (0 = off)",
+  "d": 0,
+  "t": "num",
+  "l": "Idle Screen Minutes"
+ },
+ {
+  "k": "idleScreenMessage",
+  "g": "Site-wide controls",
+  "h": "",
+  "d": "Are you still there? Tap Continue to keep using the portal.",
+  "t": "text",
+  "l": "Idle Screen Message"
+ },
+ {
+  "k": "forceSameTab",
+  "g": "Site-wide controls",
+  "h": "true = apps open in the same tab",
+  "d": false,
+  "t": "bool",
+  "l": "Force Same Tab"
+ },
+ {
+  "k": "forcedTheme",
+  "g": "Site-wide controls",
+  "h": "lock the theme, like \"dark\" or \"light\" (blank = students choose)",
+  "d": "",
+  "t": "select",
+  "o": [
+   "",
+   "dark",
+   "light"
+  ],
+  "l": "Forced Theme"
+ },
+ {
+  "k": "startTab",
+  "g": "Site-wide controls",
+  "h": "tab that opens first: apps, tools, plan, cal, school, courses, ath, help, settings (blank = last used)",
+  "d": "",
+  "t": "select",
+  "o": [
+   "",
+   "apps",
+   "tools",
+   "plan",
+   "cal",
+   "school",
+   "courses",
+   "ath",
+   "help",
+   "settings"
+  ],
+  "l": "Start Tab"
+ },
+ {
+  "k": "portalName",
+  "g": "Site-wide controls",
+  "h": "rename the portal, like \"Raider Hub\" (blank = Raider Portal)",
+  "d": "",
+  "t": "str",
+  "l": "Portal Name"
+ },
+ {
+  "k": "greetingText",
+  "g": "Site-wide controls",
+  "h": "replaces \"Every school tool you need, one click away.\"",
+  "d": "",
+  "t": "text",
+  "l": "Greeting Text"
+ },
+ {
+  "k": "tabApps",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Apps"
+ },
+ {
+  "k": "tabTools",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Tools"
+ },
+ {
+  "k": "tabPlanner",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Planner"
+ },
+ {
+  "k": "tabCalendar",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Calendar"
+ },
+ {
+  "k": "tabSchoolInfo",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab School Info"
+ },
+ {
+  "k": "tabCourses",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Courses"
+ },
+ {
+  "k": "tabAthletics",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Athletics"
+ },
+ {
+  "k": "tabCounseling",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Counseling"
+ },
+ {
+  "k": "tabSettings",
+  "g": "Tabs",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Tab Settings"
+ },
+ {
+  "k": "toolTimers",
+  "g": "Tool groups",
+  "h": "Study timer, Stopwatch, Countdowns",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Timers"
+ },
+ {
+  "k": "toolGradeCalculators",
+  "g": "Tool groups",
+  "h": "Grade calculator, GPA calculator, Final exam calculator",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Grade Calculators"
+ },
+ {
+  "k": "toolMathCalculators",
+  "g": "Tool groups",
+  "h": "Scientific, Quadratic, Stats, GCF and LCM, Percent, Base converter, Roman numerals",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Math Calculators"
+ },
+ {
+  "k": "toolConvertersAndDates",
+  "g": "Tool groups",
+  "h": "Unit converter, Date calculator",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Converters And Dates"
+ },
+ {
+  "k": "toolWritingHelpers",
+  "g": "Tool groups",
+  "h": "Word counter, Citation maker, Text tools, Typing test",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Writing Helpers"
+ },
+ {
+  "k": "toolOrganizers",
+  "g": "Tool groups",
+  "h": "To-do list, Quick notes, Flashcards",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Organizers"
+ },
+ {
+  "k": "toolRandomAndSecurity",
+  "g": "Tool groups",
+  "h": "Randomizer, Password maker",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Random And Security"
+ },
+ {
+  "k": "toolColor",
+  "g": "Tool groups",
+  "h": "Color tools",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Color"
+ },
+ {
+  "k": "homeHeroTitle",
+  "g": "Apps home page",
+  "h": "big Raider Portal title",
+  "d": true,
+  "t": "bool",
+  "l": "Home Hero Title"
+ },
+ {
+  "k": "homeGreeting",
+  "g": "Apps home page",
+  "h": "greeting line",
+  "d": true,
+  "t": "bool",
+  "l": "Home Greeting"
+ },
+ {
+  "k": "homeCounters",
+  "g": "Apps home page",
+  "h": "Apps / Categories / Courses numbers",
+  "d": true,
+  "t": "bool",
+  "l": "Home Counters"
+ },
+ {
+  "k": "homeSearchBox",
+  "g": "Apps home page",
+  "h": "search box (also turns off the / shortcut)",
+  "d": true,
+  "t": "bool",
+  "l": "Home Search Box"
+ },
+ {
+  "k": "homeTypingPlaceholder",
+  "g": "Apps home page",
+  "h": "animated text in the search box",
+  "d": true,
+  "t": "bool",
+  "l": "Home Typing Placeholder"
+ },
+ {
+  "k": "homeCategoryBar",
+  "g": "Apps home page",
+  "h": "category chips",
+  "d": true,
+  "t": "bool",
+  "l": "Home Category Bar"
+ },
+ {
+  "k": "homePinnedApps",
+  "g": "Apps home page",
+  "h": "Pin buttons and the Pinned row",
+  "d": true,
+  "t": "bool",
+  "l": "Home Pinned Apps"
+ },
+ {
+  "k": "homeRecentApps",
+  "g": "Apps home page",
+  "h": "Recently opened row",
+  "d": true,
+  "t": "bool",
+  "l": "Home Recent Apps"
+ },
+ {
+  "k": "homeViewToggle",
+  "g": "Apps home page",
+  "h": "Grid / List button",
+  "d": true,
+  "t": "bool",
+  "l": "Home View Toggle"
+ },
+ {
+  "k": "topBrand",
+  "g": "Top bar and page extras",
+  "h": "name at the left of the top bar",
+  "d": true,
+  "t": "bool",
+  "l": "Top Brand"
+ },
+ {
+  "k": "topTabBar",
+  "g": "Top bar and page extras",
+  "h": "the row of tabs",
+  "d": true,
+  "t": "bool",
+  "l": "Top Tab Bar"
+ },
+ {
+  "k": "topQuickFind",
+  "g": "Top bar and page extras",
+  "h": "Quick find button and Ctrl K",
+  "d": true,
+  "t": "bool",
+  "l": "Top Quick Find"
+ },
+ {
+  "k": "topThemeMenu",
+  "g": "Top bar and page extras",
+  "h": "Themes button",
+  "d": true,
+  "t": "bool",
+  "l": "Top Theme Menu"
+ },
+ {
+  "k": "backToTopButton",
+  "g": "Top bar and page extras",
+  "h": "floating Top button",
+  "d": true,
+  "t": "bool",
+  "l": "Back To Top Button"
+ },
+ {
+  "k": "scrollProgressBar",
+  "g": "Top bar and page extras",
+  "h": "thin progress bar",
+  "d": true,
+  "t": "bool",
+  "l": "Scroll Progress Bar"
+ },
+ {
+  "k": "loadingScreen",
+  "g": "Top bar and page extras",
+  "h": "intro loading screen",
+  "d": true,
+  "t": "bool",
+  "l": "Loading Screen"
+ },
+ {
+  "k": "keyboardShortcuts",
+  "g": "Top bar and page extras",
+  "h": "every keyboard shortcut",
+  "d": true,
+  "t": "bool",
+  "l": "Keyboard Shortcuts"
+ },
+ {
+  "k": "animations",
+  "g": "Visual effects",
+  "h": "motion across pages, cards and hovers",
+  "d": true,
+  "t": "bool",
+  "l": "Animations"
+ },
+ {
+  "k": "floatingParticles",
+  "g": "Visual effects",
+  "h": "drifting dots",
+  "d": true,
+  "t": "bool",
+  "l": "Floating Particles"
+ },
+ {
+  "k": "backgroundGlow",
+  "g": "Visual effects",
+  "h": "soft colored lights",
+  "d": true,
+  "t": "bool",
+  "l": "Background Glow"
+ },
+ {
+  "k": "cardTilt3D",
+  "g": "Visual effects",
+  "h": "app cards lean toward the cursor",
+  "d": true,
+  "t": "bool",
+  "l": "Card Tilt3 D"
+ },
+ {
+  "k": "frostedBlur",
+  "g": "Visual effects",
+  "h": "frosted glass blur",
+  "d": true,
+  "t": "bool",
+  "l": "Frosted Blur"
+ },
+ {
+  "k": "rippleEffect",
+  "g": "Visual effects",
+  "h": "ripple when a button is pressed",
+  "d": true,
+  "t": "bool",
+  "l": "Ripple Effect"
+ },
+ {
+  "k": "appAddresses",
+  "g": "Visual effects",
+  "h": "site name under each app",
+  "d": true,
+  "t": "bool",
+  "l": "App Addresses"
+ },
+ {
+  "k": "settingsThemes",
+  "g": "Settings tab sections",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Settings Themes"
+ },
+ {
+  "k": "settingsEffects",
+  "g": "Settings tab sections",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Settings Effects"
+ },
+ {
+  "k": "settingsPersonalize",
+  "g": "Settings tab sections",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Settings Personalize"
+ },
+ {
+  "k": "settingsData",
+  "g": "Settings tab sections",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Settings Data"
+ },
+ {
+  "k": "settingsAbout",
+  "g": "Settings tab sections",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Settings About"
+ },
+ {
+  "k": "settingsShortcutsList",
+  "g": "Settings tab sections",
+  "h": "",
+  "d": true,
+  "t": "bool",
+  "l": "Settings Shortcuts List"
+ },
+ {
+  "k": "calendarMyEvents",
+  "g": "Extra features",
+  "h": "add your own calendar events",
+  "d": true,
+  "t": "bool",
+  "l": "Calendar My Events"
+ },
+ {
+  "k": "athleticsMyGames",
+  "g": "Extra features",
+  "h": "My games section",
+  "d": true,
+  "t": "bool",
+  "l": "Athletics My Games"
+ },
+ {
+  "k": "courseSaving",
+  "g": "Extra features",
+  "h": "Save button and Saved only filter",
+  "d": true,
+  "t": "bool",
+  "l": "Course Saving"
+ },
+ {
+  "k": "plannerStats",
+  "g": "Extra features",
+  "h": "stat tiles and progress bar",
+  "d": true,
+  "t": "bool",
+  "l": "Planner Stats"
+ },
+ {
+  "k": "counselingCrisisCard",
+  "g": "Extra features",
+  "h": "\"Need help right now?\" card",
+  "d": true,
+  "t": "bool",
+  "l": "Counseling Crisis Card"
+ },
+ {
+  "k": "schoolTermsTable",
+  "g": "Extra features",
+  "h": "2026-2027 calendar table",
+  "d": true,
+  "t": "bool",
+  "l": "School Terms Table"
+ },
+ {
+  "k": "confirmBeforeOpen",
+  "g": "Sites and links",
+  "h": "ask \"Open in a new tab?\" before a site opens (students can switch it off in Settings)",
+  "d": true,
+  "t": "bool",
+  "l": "Confirm Before Open"
+ },
+ {
+  "k": "confirmMessage",
+  "g": "Sites and links",
+  "h": "your own message. Use {site} for the site name. Empty = the default message",
+  "d": "",
+  "t": "text",
+  "l": "Confirm Message"
+ },
+ {
+  "k": "confirmSkipSites",
+  "g": "Sites and links",
+  "h": "sites that never ask first, like [\"classroom.google.com\"]",
+  "d": [],
+  "t": "list",
+  "l": "Confirm Skip Sites"
+ },
+ {
+  "k": "settingsFAQ",
+  "g": "More settings",
+  "h": "FAQ at the bottom of Settings",
+  "d": true,
+  "t": "bool",
+  "l": "Settings F A Q"
+ },
+ {
+  "k": "prefTabNumbers",
+  "g": "More settings",
+  "h": "\"Show tab numbers\" setting (false hides that setting)",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Tab Numbers"
+ },
+ {
+  "k": "popupMessages",
+  "g": "More settings",
+  "h": "small pop-up messages at the bottom (false turns them off for everyone)",
+  "d": true,
+  "t": "bool",
+  "l": "Popup Messages"
+ },
+ {
+  "k": "prefSmoothScroll",
+  "g": "More settings",
+  "h": "\"Smooth scrolling\" setting",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Smooth Scroll"
+ },
+ {
+  "k": "prefLineSpacing",
+  "g": "More settings",
+  "h": "\"Extra line spacing\" setting",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Line Spacing"
+ },
+ {
+  "k": "prefFocusRing",
+  "g": "More settings",
+  "h": "\"Strong focus outline\" setting",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Focus Ring"
+ },
+ {
+  "k": "prefUnderlineLinks",
+  "g": "More settings",
+  "h": "\"Underline links\" setting",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Underline Links"
+ },
+ {
+  "k": "prefNightShift",
+  "g": "More settings",
+  "h": "\"Night shift\" setting and its W shortcut",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Night Shift"
+ },
+ {
+  "k": "prefPageDimmer",
+  "g": "More settings",
+  "h": "\"Page dimmer\" slider",
+  "d": true,
+  "t": "bool",
+  "l": "Pref Page Dimmer"
+ },
+ {
+  "k": "defaultTheme",
+  "g": "More settings",
+  "h": "theme new visitors start with, like \"ocean\" (they can still change it)",
+  "d": "",
+  "t": "str",
+  "l": "Default Theme"
+ },
+ {
+  "k": "tabNames",
+  "g": "More settings",
+  "h": "rename tabs, like {apps:\"Home\",tools:\"Study tools\"}",
+  "d": {},
+  "t": "map",
+  "l": "Tab Names"
+ },
+ {
+  "k": "toolScience",
+  "g": "Tools",
+  "h": "Molar mass calculator",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Science"
+ },
+ {
+  "k": "toolFocus",
+  "g": "Tools",
+  "h": "Focus sounds, Sketch pad",
+  "d": true,
+  "t": "bool",
+  "l": "Tool Focus"
+ },
+ {
+  "k": "shortcutsExtra",
+  "g": "Shortcuts",
+  "h": "the extra shortcuts: I, X, D, Y, U, J, =, -, W and G then F or K",
+  "d": true,
+  "t": "bool",
+  "l": "Shortcuts Extra"
+ },
+ {
+  "k": "disabledShortcuts",
+  "g": "Shortcuts",
+  "h": "turn single extra shortcuts off, like [\"fs\",\"rtheme\"]. Names: recent, lastTab, lightdark, rtheme, fs, bottom, zin, zout, warm",
+  "d": [],
+  "t": "multi",
+  "o": [
+   "recent",
+   "lastTab",
+   "lightdark",
+   "rtheme",
+   "fs",
+   "bottom",
+   "zin",
+   "zout",
+   "warm"
+  ],
+  "l": "Disabled Shortcuts"
+ },
+ {
+  "k": "customApps",
+  "g": "Custom apps",
+  "h": "Apps you add. Each one has a name, a link and a category.",
+  "d": [],
+  "t": "apps",
+  "l": "Custom Apps"
+ },
+ {
+  "k": "faq",
+  "g": "Faq",
+  "h": "questions and answers shown at the bottom of Settings",
+  "d": [
+   {
+    "q": "What is the Raider Portal?",
+    "a": "The Raider Portal is a student hub for Middletown Area School District. It puts the apps, study tools, calendar, planner and school information students use most in one place, so you can find them with one click."
+   },
+   {
+    "q": "Is this the official school district website?",
+    "a": "No. The Raider Portal is a separate student tool. For official news, board information, calendars and contacts, visit raiderweb.org."
+   },
+   {
+    "q": "Do I need an account or password?",
+    "a": "No. You can use the portal without signing in."
+   },
+   {
+    "q": "What can I do here?",
+    "a": "Apps: open and pin your school apps.\nTools: timers, calculators, a to-do list, notes, flashcards, a sketch pad, focus sounds and more.\nPlanner: track assignments by due date.\nCalendar: see the 2026-27 school calendar and add your own events.\nSchool info, Courses, Athletics and Counseling: quick access to key information and support."
+   },
+   {
+    "q": "Where is my data stored?",
+    "a": "Pins, recent apps, notes, tasks, habits and settings are saved only on your own device and browser. They are not uploaded anywhere, so clearing your browser data or switching devices will reset them."
+   },
+   {
+    "q": "What keyboard shortcuts are there?",
+    "a": "Press ? to see the full list in Settings. You can change most keys there. Press G then a letter to jump to a tab, or press 1 to 9."
+   },
+   {
+    "q": "Why is something locked or blocked?",
+    "a": "Teachers and administrators can turn parts of the portal off, for example during a test, or lock it for a set time. If something is unavailable, check with your teacher."
+   },
+   {
+    "q": "I need help right now. What should I do?",
+    "a": "Open the Counseling tab. If you or someone else is in crisis, call or text 988 any time, or call 911 in an emergency."
+   },
+   {
+    "q": "Something is broken or I have an idea. Who do I tell?",
+    "a": "Tell your teacher or the school technology department and they can pass it on."
+   }
+  ],
+  "t": "faq",
+  "l": "Faq"
+ }
+]
