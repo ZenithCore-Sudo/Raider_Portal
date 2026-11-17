@@ -1,7 +1,21 @@
 {
  "config": {
   "lockdownMessage": "This portal is locked right now.. Check Back Later",
-  "lockdownShowHelp": false
+  "lockdownShowHelp": false,
+  "testingMode": true,
+  "testingTabs": [
+   "apps",
+   "tools",
+   "plan",
+   "cal",
+   "school",
+   "courses",
+   "ath",
+   "help",
+   "settings"
+  ],
+  "testingHideTools": [],
+  "testingMessage": "Website Maintenance"
  },
  "presets": {},
  "notes": ""
