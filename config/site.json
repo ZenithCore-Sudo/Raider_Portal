@@ -16,7 +16,19 @@
   ],
   "testingHideTools": [],
   "testingMessage": "Website Maintenance!\n\nEverything you do is not saved.",
-  "banner": "Update Coming Soon. \n\nEstimated Date 11/24/26"
+  "banner": "Update Coming Soon. \n\nEstimated Date 11/24/26",
+  "blockedApps": [
+   "Naviance",
+   "Destiny Library",
+   "Scholastic",
+   "Flip",
+   "Wolfram Alpha",
+   "Math Antics",
+   "Purdue OWL",
+   "Project Gutenberg",
+   "WordReference",
+   "CodingBat"
+  ]
  },
  "presets": {},
  "notes": ""
