@@ -1,8 +1,7 @@
 {
  "config": {
   "lockdownMessage": "This portal is locked right now.. Check Back Later",
-  "lockdownShowHelp": false,
-  "testingMode": true
+  "lockdownShowHelp": false
  },
  "presets": {},
  "notes": ""
